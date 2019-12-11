@@ -10,5 +10,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: git switch -c feature/fixDockerfile && ls -la
-- script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD $DOCKER_PULL_HOST
+- task: Docker@2
+  displayName: Build an image
+  inputs:
+    command: build
+    Dockerfile: ./docker/Dockerfile
+
+# steps:
+# - script: git switch -c feature/fixDockerfile && ls -la
+# - script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD $DOCKER_PULL_HOST
