@@ -13,8 +13,10 @@ steps:
 - task: Docker@2
   displayName: Build an image
   inputs:
-    command: build
-    Dockerfile: ./docker/Dockerfile
+    containerRegistry: 'dockerpush'
+    repository: 'keycloak-test'
+    command: 'build'
+    Dockerfile: './docker/Dockerfile'
 
 - script: docker images
 
