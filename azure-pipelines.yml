@@ -10,5 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: docker -v
-- script: echo "$(TestENV)"
+- script: $PWD
+- script: ls -la
+
+#- script: echo "$(TestENV)"
