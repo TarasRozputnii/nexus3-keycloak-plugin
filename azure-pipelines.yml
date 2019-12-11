@@ -17,7 +17,7 @@ steps:
     repository: 'keycloak-test'
     command: 'build'
     Dockerfile: './docker/Dockerfile'
-    arguments: '-t 0.1'
+    arguments: '-t docker-push.rga.k8s.fireblink.com/keycloak-test:0.1'
     
 
 # - task: Docker@2
