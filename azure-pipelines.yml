@@ -17,6 +17,17 @@ steps:
     repository: 'keycloak-test'
     command: 'build'
     Dockerfile: './docker/Dockerfile'
+    arguments: '-t keycloak-test:latest'
+    
+
+- task: Docker@2
+  displayName: Push image
+  inputs:
+    containerRegistry: dockerpush
+    repository: keycloak-test
+    command: push
+    tags: keycloak-test:latest
+      
 
 - script: docker images
 
