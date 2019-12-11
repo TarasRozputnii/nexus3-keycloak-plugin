@@ -16,6 +16,8 @@ steps:
     command: build
     Dockerfile: ./docker/Dockerfile
 
+- script: docker images
+
 # steps:
 # - script: git switch -c feature/fixDockerfile && ls -la
 # - script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD $DOCKER_PULL_HOST
