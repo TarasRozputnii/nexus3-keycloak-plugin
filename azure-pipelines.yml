@@ -20,13 +20,13 @@ steps:
     arguments: '-t 0.1'
     
 
-- task: Docker@2
-  displayName: Push image
-  inputs:
-    containerRegistry: dockerpush
-    repository: keycloak-test
-    command: push
-    tags: 0.1
+# - task: Docker@2
+#   displayName: Push image
+#   inputs:
+#     containerRegistry: dockerpush
+#     repository: keycloak-test
+#     command: push
+#     tags: 0.1
       
 
 - script: docker images
