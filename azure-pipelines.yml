@@ -10,7 +10,4 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: $PWD
-- script: ls -la
-
-#- script: echo "$(TestENV)"
+- script: git switch -c feature/fixDockerfile
