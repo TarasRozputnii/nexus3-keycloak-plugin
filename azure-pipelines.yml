@@ -10,4 +10,4 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: git switch -c feature/fixDockerfile
+- script: git switch -c feature/fixDockerfile && ls -la
